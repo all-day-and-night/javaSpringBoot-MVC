@@ -21,7 +21,7 @@ public class FrontControllerServletV4 extends HttpServlet {
 
     public FrontControllerServletV4(){
         controllerMap.put("/front-controller/v4/members/new-form", new MemberFormControllerV4());
-        controllerMap.put("/front-controller/v4/members/save-result", new MemberSaveControllerV4());
+        controllerMap.put("/front-controller/v4/members/save", new MemberSaveControllerV4());
         controllerMap.put("/front-controller/v4/members", new MemberListControllerV4());
     }
 
@@ -50,6 +50,6 @@ public class FrontControllerServletV4 extends HttpServlet {
     }
 
     private MyView viewResolver(String viewName){
-        return new MyView("/WEB-INF/view/" + viewName + ".jsp");
+        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
 }
